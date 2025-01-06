@@ -1,0 +1,9 @@
+VIEW CatalogService_RecmBooks AS SELECT
+  DT_RECM_0.ID,
+  DT_RECM_0.createdAt,
+  DT_RECM_0.createdBy,
+  DT_RECM_0.modifiedAt,
+  DT_RECM_0.modifiedBy,
+  DT_RECM_0.obookid,
+  DT_RECM_0.recmusremail
+FROM bookshop_mr_DT_RECM AS DT_RECM_0

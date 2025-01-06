@@ -1,0 +1,12 @@
+COLUMN TABLE bookshop_mr_DT_USER (
+  ID NVARCHAR(36) NOT NULL,
+  createdAt TIMESTAMP,
+  createdBy NVARCHAR(255),
+  modifiedAt TIMESTAMP,
+  modifiedBy NVARCHAR(255),
+  fname NVARCHAR(250),
+  lname NVARCHAR(250),
+  email NVARCHAR(250),
+  pwd NVARCHAR(250),
+  PRIMARY KEY(ID)
+)

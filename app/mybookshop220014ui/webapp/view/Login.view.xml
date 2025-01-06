@@ -1,0 +1,26 @@
+<mvc:View controllerName="mbs.mybookshop220014ui.controller.Login"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:form="sap.ui.layout.form"
+    xmlns="sap.m">
+
+    <Page title="Login Page" 
+	      class="zEP_checklist" 
+		  showNavButton="true"
+		  navButtonPress="goBack">  
+
+<content>
+   <VBox fitContainer="true" justifyContent="Center" alignItems="Center" alignContent="Center">
+    <items>
+     <Input id="emailid" placeholder="User Email ID"></Input>
+     <Input id="pasw" placeholder="Password" type="Password"></Input>
+	 <FlexBox><Label></Label></FlexBox>  
+	 <FlexBox><Label></Label></FlexBox>  
+     <Button width="12rem" text="Login" type="Emphasized" press="onLoginPress"></Button>
+	 <Button width="12rem" text="Register" type="Emphasized" press="onRegister"></Button>
+
+    </items>
+   </VBox>
+  </content>
+
+    </Page>
+</mvc:View>

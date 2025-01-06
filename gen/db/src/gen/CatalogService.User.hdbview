@@ -1,0 +1,11 @@
+VIEW CatalogService_User AS SELECT
+  DT_USER_0.ID,
+  DT_USER_0.createdAt,
+  DT_USER_0.createdBy,
+  DT_USER_0.modifiedAt,
+  DT_USER_0.modifiedBy,
+  DT_USER_0.fname,
+  DT_USER_0.lname,
+  DT_USER_0.email,
+  DT_USER_0.pwd
+FROM bookshop_mr_DT_USER AS DT_USER_0

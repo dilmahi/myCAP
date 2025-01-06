@@ -1,0 +1,87 @@
+<mvc:View controllerName="mbs.mybookshop220014ui.controller.Favs"
+    displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:semantic="sap.m.semantic"
+    xmlns:l="sap.ui.layout"
+    xmlns:fb="sap.ui.comp.filterbar"    
+    xmlns="sap.m">
+    
+       <Page title="Library" class="zEP_checklist">  
+
+       	
+
+	
+		
+        	
+				<content>
+              
+
+<Table
+							id="FavBooksList"
+							growing="true"
+							growingThreshold="30"
+							sticky="ColumnHeaders,HeaderToolbar"
+							items="{
+								path: 'capservice>/FavBooks',
+                                parameters: 
+                           { 
+                              'expand' : 'toBooks' 
+                           }
+								
+							}">                    
+
+                	<headerToolbar>
+
+								<OverflowToolbar>
+									<content>
+                 <ToolbarSpacer/>
+
+                 		<SearchField
+											id="searchField"
+											width="20%"
+											placeholder="Search by ID"
+											search=".onSearchBookID"/>
+                                            									                            
+				</content>
+
+		</OverflowToolbar>
+							</headerToolbar>
+
+		<columns>
+								<Column id="bookID">
+									<Text text="ID"/>
+								</Column>
+								<Column id="Name">
+									<Text text="Name"/>
+								</Column>
+								<Column id="Author">
+									<Text text="Author"/>
+								</Column>
+								<Column id="category">
+									<Text text="Category"/>
+								</Column>																													
+							</columns>
+							<items>
+								<ColumnListItem>
+									<cells>
+										<Label text="{capservice>obookid}"/>
+									</cells>
+									<cells>
+										<Label text="{capservice>toBooks/0/name}"/>
+									</cells>
+									<cells>
+										<Label text="{capservice>toBooks/0/author}"/>
+									</cells>
+									<cells>
+										<Label text="{capservice>toBooks/0/category}"/>
+									</cells>													
+								</ColumnListItem>
+							</items>
+						</Table>                            
+
+                            </content>
+        
+			            
+    </Page>
+
+</mvc:View>

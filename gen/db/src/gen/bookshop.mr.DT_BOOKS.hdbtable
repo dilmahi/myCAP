@@ -1,0 +1,13 @@
+COLUMN TABLE bookshop_mr_DT_BOOKS (
+  ID NVARCHAR(36) NOT NULL,
+  createdAt TIMESTAMP,
+  createdBy NVARCHAR(255),
+  modifiedAt TIMESTAMP,
+  modifiedBy NVARCHAR(255),
+  obookid NVARCHAR(250),
+  name NVARCHAR(250),
+  author NVARCHAR(250),
+  category NVARCHAR(250),
+  usremail NVARCHAR(250),
+  PRIMARY KEY(ID)
+)

@@ -1,0 +1,9 @@
+VIEW CatalogService_FavBooks AS SELECT
+  DT_FAV_0.ID,
+  DT_FAV_0.createdAt,
+  DT_FAV_0.createdBy,
+  DT_FAV_0.modifiedAt,
+  DT_FAV_0.modifiedBy,
+  DT_FAV_0.obookid,
+  DT_FAV_0.usermail
+FROM bookshop_mr_DT_FAV AS DT_FAV_0

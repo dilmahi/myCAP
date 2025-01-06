@@ -1,0 +1,10 @@
+COLUMN TABLE bookshop_mr_DT_RECM (
+  ID NVARCHAR(36) NOT NULL,
+  createdAt TIMESTAMP,
+  createdBy NVARCHAR(255),
+  modifiedAt TIMESTAMP,
+  modifiedBy NVARCHAR(255),
+  obookid NVARCHAR(250) NOT NULL,
+  recmusremail NVARCHAR(250),
+  PRIMARY KEY(ID, obookid)
+)

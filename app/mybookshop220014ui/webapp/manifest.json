@@ -1,0 +1,182 @@
+{
+  "_version": "1.65.0",
+  "sap.app": {
+    "id": "mbs.mybookshop220014ui",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.15.7",
+      "toolsId": "a9237ae3-433c-41f9-804a-2b84a1bdb847"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/odata/v4/catalog/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "odataVersion": "4.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.131.1",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "mbs.mybookshop220014ui.i18n.i18n"
+        }
+      },
+      "capservice": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {
+                    "synchronizationMode": "None",
+                    "operationMode": "Server",
+                    "autoExpandSelect": true,
+                    "earlyRequests": true,
+                    "groupId": "$direct"
+                }
+      }    
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "transition": "slide",
+        "type": "View",
+        "viewType": "XML",
+        "path": "mbs.mybookshop220014ui.view"
+      },
+      "routes": [
+        {"pattern": "",
+         "name": "RouteApp",
+         "target": [
+          "TargetApp"
+        ]
+        },
+        {
+          "name": "RouteLogin",
+          "pattern": "Login",
+          "target": [
+            "TargetLogin"
+          ]
+        },
+        {
+          "name": "RouteDashBoard",
+          "pattern": "DashBoard",
+          "target": [
+            "TargetDashBoard"
+          ]          
+        },
+        {
+          "name": "RouteBooks",
+          "pattern": "Books",
+          "target": [
+            "TargetBooks"
+          ]          
+        },
+        {
+          "name": "RouteFavs",
+          "pattern": "Favs",
+          "target": [
+            "TargetFavs"
+          ]          
+        },
+        {
+          "name": "RouteRecm",
+          "pattern": "Recm",
+          "target": [
+            "TargetRecm"
+          ]          
+        },
+        {
+          "name": "RouteKPIs",
+          "pattern": "KPIs",
+          "target": [
+            "TargetKPIs"
+          ]          
+        }        
+      ],
+      "targets": {
+        "TargetApp": {
+          "id": "app",
+          "name": "App"
+        },
+        "TargetLogin": {
+          "id": "login",
+          "name": "Login"
+        },
+        "TargetDashBoard": {
+          "id": "dashboard",
+          "name": "DashBoard"
+        },
+        "TargetBooks": {
+          "id": "books",
+          "name": "Books"
+        },
+        "TargetFavs": {
+          "id": "favs",
+          "name": "Favs"
+        },  
+        "TargetRecm": {
+          "id": "recm",
+          "name": "Recm"
+        },  
+        "TargetKPIs": {
+          "id": "kpis",
+          "name": "Analytics"
+        }                                  
+                
+      }
+    },
+    "rootView": {
+      "viewName": "mbs.mybookshop220014ui.view.App",
+      "type": "XML",
+      "id": "App"
+    }
+  }
+}

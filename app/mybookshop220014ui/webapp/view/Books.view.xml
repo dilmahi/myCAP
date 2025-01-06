@@ -1,0 +1,115 @@
+<mvc:View controllerName="mbs.mybookshop220014ui.controller.Books"
+    displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:semantic="sap.m.semantic"
+    xmlns:l="sap.ui.layout"
+    xmlns:fb="sap.ui.comp.filterbar"    
+    xmlns="sap.m">
+    
+       <Page title="Library" class="zEP_checklist">  
+
+       	
+
+	
+		
+        	
+				<content>
+              
+
+<Table
+							id="BooksList"
+							growing="true"
+							growingThreshold="30"
+							sticky="ColumnHeaders,HeaderToolbar"
+							items="{
+								path: 'BooksModel>/books'
+								
+							}">        
+
+      <infoToolbar>
+                    <OverflowToolbar id="BooksFilterBar" design="Solid"  visible="false">
+                        <Text id="BooksFilterLabel" />
+                    </OverflowToolbar>
+                </infoToolbar>							            
+
+                	<headerToolbar>
+
+								<OverflowToolbar>
+									<content>
+
+                 <ToolbarSpacer/>
+
+                 		<SearchField
+											id="searchField"
+											width="20%"
+											placeholder="Search by ID"
+											search=".onSearchBookID"/>
+			<OverflowToolbarButton text="Sort" type="Transparent" icon="sap-icon://sort" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="handleOpenDialogSort" />
+			<OverflowToolbarButton text="Filter" type="Transparent" icon="sap-icon://filter" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="handleOpenDialogFilter" />
+			<OverflowToolbarButton text="Group" type="Transparent" icon="sap-icon://group-2" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="handleOpenDialogGroup" />														
+                                            									                            
+				</content>
+
+		</OverflowToolbar>
+							</headerToolbar>
+
+		<columns>
+								<Column id="bookId">
+									<Text text="ID"/>
+								</Column>
+								<Column id="bookName">
+									<Text text="Name"/>
+								</Column>
+								<Column id="author">
+									<Text text="Author"/>
+								</Column>
+								<Column id="category">
+									<Text text="Category"/>
+								</Column>
+								<Column id="markFav">
+									<Text text="Make Favorite"/>
+								</Column>
+								<Column id="recm">
+									<Text text="Recommend"/>
+								</Column>	
+								<Column id="shelf">
+									<Text text="Add to Shelf"/>
+								</Column>		
+																										
+							</columns>
+							<items>
+								<ColumnListItem>
+									<cells>
+										<Label text="{BooksModel>bookId}"/>
+									</cells>
+									<cells>
+										<Label text="{BooksModel>bookName}"/>
+									</cells>
+									<cells>
+										<Label text="{BooksModel>author}"/>
+									</cells>
+									<cells>
+										<Label text="{BooksModel>category}"/>
+									</cells>
+									<cells>
+										<Button icon="{path: 'BooksModel>bookId', formatter: '.favsState'}" type="Transparent"
+                                                tooltip="Mark Favorite" press="onFav" />
+									</cells>
+									<cells>
+										   <Button icon="{path: 'BooksModel>bookId', formatter: '.favsRecm'}" type="Transparent"
+                                                tooltip="Recommended" press="onRecm" />
+									</cells>
+									<cells>
+										   <Button icon="{path: 'BooksModel>bookId', formatter: '.favsShelf'}" type="Transparent"
+                                                tooltip="Add to Shelf" press="onShelf" />
+									</cells>									
+								</ColumnListItem>
+							</items>
+						</Table>                            
+
+                            </content>
+        
+			            
+    </Page>
+
+</mvc:View>

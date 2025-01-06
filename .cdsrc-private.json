@@ -1,0 +1,51 @@
+{
+  "requires": {
+    "[hybrid]": {
+      "db": {
+        "binding": {
+          "type": "cf",
+          "apiEndpoint": "https://api.cf.us10-001.hana.ondemand.com",
+          "org": "a7feae60trial",
+          "space": "bookshop_mr",
+          "instance": "MyBookShop_220014-db",
+          "key": "MyBookShop_220014-db-key",
+          "resolved": false
+        },
+        "kind": "hana",
+        "vcap": {
+          "name": "db"
+        }
+      },
+      "auth": {
+        "binding": {
+          "type": "cf",
+          "apiEndpoint": "https://api.cf.us10-001.hana.ondemand.com",
+          "org": "a7feae60trial",
+          "space": "bookshop_mr",
+          "instance": "MyBookShop_220014-auth",
+          "key": "MyBookShop_220014-auth-key",
+          "resolved": false
+        },
+        "kind": "xsuaa-auth",
+        "vcap": {
+          "name": "auth"
+        }
+      },
+      "destinations": {
+        "binding": {
+          "type": "cf",
+          "apiEndpoint": "https://api.cf.us10-001.hana.ondemand.com",
+          "org": "a7feae60trial",
+          "space": "bookshop_mr",
+          "instance": "bsmr_dest",
+          "key": "bsmr_dest-key",
+          "resolved": false
+        },
+        "kind": "destinations",
+        "vcap": {
+          "name": "destinations"
+        }
+      }
+    }
+  }
+}

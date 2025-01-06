@@ -1,0 +1,12 @@
+VIEW CatalogService_Books AS SELECT
+  DT_BOOKS_0.ID,
+  DT_BOOKS_0.createdAt,
+  DT_BOOKS_0.createdBy,
+  DT_BOOKS_0.modifiedAt,
+  DT_BOOKS_0.modifiedBy,
+  DT_BOOKS_0.obookid,
+  DT_BOOKS_0.name,
+  DT_BOOKS_0.author,
+  DT_BOOKS_0.category,
+  DT_BOOKS_0.usremail
+FROM bookshop_mr_DT_BOOKS AS DT_BOOKS_0

@@ -1,0 +1,33 @@
+<mvc:View controllerName="mbs.mybookshop220014ui.controller.App"
+    displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:semantic="sap.m.semantic"
+    xmlns:core="sap.ui.core"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"     
+    xmlns="sap.m">
+    <App id="app" backgroundImage="BookShelf2.png" backgroundOpacity="100" >
+
+<Panel backgroundDesign="Transparent" headerText="Welcome to Mahesh BookShelf !!!">
+			<FlexBox
+				height="800px"
+				alignItems="Center"
+				justifyContent="Center">
+        
+	<Button text="Existing User" 
+                press="onLogin" 
+                type="Emphasized"
+                class="sapUiLargeMargin"/>
+
+     <Button text="New User Registration" 
+                press="onRegister" 
+                type="Emphasized"
+                class="sapUiLargeMargin"/>  
+			</FlexBox>
+		</Panel>
+		
+		
+	
+
+    </App>
+</mvc:View>

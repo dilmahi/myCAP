@@ -1,0 +1,40 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" id="fragRegister">
+    <Dialog id="openDialog" title="Register Here" >
+        <VBox class="sapUiSmallMargin">
+            <f:SimpleForm
+                id="CompanyForm"
+                editable="true"
+                layout="ResponsiveGridLayout"
+                title="User Details"
+                labelSpanXL="3"
+                labelSpanL="3"
+                labelSpanM="3"
+                labelSpanS="12"
+                adjustLabelSpan="false"
+                emptySpanXL="4"
+                emptySpanL="4"
+                emptySpanM="4"
+                emptySpanS="0"
+                columnsXL="1"
+                columnsL="1"
+                columnsM="1"
+                singleContainerFullSize="false">
+                <f:content>
+                    <Label text="First Name" required="true" />
+                    <Input id="firstName" editable="true" required="true" />
+                    <Label text="Last Name" required="true" />
+                    <Input id="lastName" editable="true"  required="true"/>
+                    <Label text="e-Mail" required="true" />
+                    <Input id="email" editable="true"  required="true"/>
+                    <Label text="Password" required="true" />
+                    <Input id="password" editable="true" required="true" />                    
+                    
+                </f:content>
+            </f:SimpleForm>
+        </VBox>
+        <buttons>
+            <Button text="Create" press=".createUser" />
+            <Button text="Cancel" press=".cancelUser" />
+        </buttons>
+    </Dialog>
+</core:FragmentDefinition>
